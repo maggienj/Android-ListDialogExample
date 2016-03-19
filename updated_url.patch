@@ -1,0 +1,44 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- app/build.gradle	(revision 69ec6e6ace259c03d85b6915d3b51cb9a2a38e36)
++++ app/build.gradle	(revision )
+@@ -5,7 +5,7 @@
+     buildToolsVersion '19.1.0'
+ 
+     defaultConfig {
+-        packageName "com.envyandroid.listdialogexample"
++        applicationId "com.envyandroid.listdialogexample"
+         minSdkVersion 14
+         targetSdkVersion 19
+         versionCode 1
+@@ -13,8 +13,9 @@
+     }
+     buildTypes {
+         release {
+-            runProguard false
+-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++            minifyEnabled false
++            //proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
++            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+         }
+     }
+ }
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- build.gradle	(revision 69ec6e6ace259c03d85b6915d3b51cb9a2a38e36)
++++ build.gradle	(revision )
+@@ -5,7 +5,7 @@
+         mavenCentral()
+     }
+     dependencies {
+-        classpath 'com.android.tools.build:gradle:0.12.+'
++        classpath 'com.android.tools.build:gradle:1.5.0'
+ 
+         // NOTE: Do not place your application dependencies here; they belong
+         // in the individual module build.gradle files
